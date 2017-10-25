@@ -25,8 +25,10 @@ class VideoCell: UICollectionViewCell {
         imageView.image = UIImage(named: "taylor_swift_profile")
         imageView.layer.cornerRadius = 22
         imageView.layer.masksToBounds = true
+        kk
         return imageView
     }()
+    
     
     let separatorView: UIView = {
         let view = UIView()
