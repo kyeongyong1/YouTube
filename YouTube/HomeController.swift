@@ -113,7 +113,20 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
         
     }
     
-    let settingLauncher = SettingLauncher()
+    lazy var settingLauncher: SettingLauncher = {
+        let launcher = SettingLauncher()
+        launcher.homeController = self
+        return launcher
+    }()
+    
+    func showControllerForSettings(_ setting: Setting) {
+        let dummyControlelr = UIViewController()
+        dummyControlelr.view.backgroundColor = UIColor.white
+        dummyControlelr.navigationItem.title = setting.name
+        navigationController?.navigationBar.tintColor = UIColor.white
+        navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.white]
+        navigationController?.pushViewController(dummyControlelr, animated: true)
+    }
     
     
     func touchedSearchButton() {
@@ -123,8 +136,6 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
     func touchedMoreButton() {
         settingLauncher.showSettings()
     }
-    
-  
     
     let menuBar: MenuBar = {
         let mb = MenuBar()
