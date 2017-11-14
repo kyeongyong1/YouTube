@@ -9,13 +9,22 @@
 import UIKit
 
 class Setting: NSObject {
-    let name: String
+    let name: SettingName
     let imageName: String
     
-    init(name: String, imageName: String) {
+    init(name: SettingName, imageName: String) {
         self.name = name
         self.imageName = imageName
     }
+}
+
+enum SettingName: String {
+    case Settings = "Settings"
+    case TermsPrivacy = "Terms & privacy policy"
+    case FeedBack = "Send Feedback"
+    case Help = "Help"
+    case SwitchAccount = "Swtich Account"
+    case Cancel = "Cancel"
 }
 
 class SettingLauncher: NSObject, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
@@ -42,7 +51,7 @@ class SettingLauncher: NSObject, UICollectionViewDataSource, UICollectionViewDel
     
     let settings: [Setting] = {
         
-        let _settings = [Setting(name: "Settings", imageName: "settings"), Setting(name: "Terms & privacy policy", imageName: "privacy"), Setting(name: "Send Feedback", imageName: "feedback"), Setting(name: "Help", imageName: "help"), Setting(name: "Switch Account", imageName: "switch_account"), Setting(name: "Cancel", imageName: "cancel")]
+        let _settings = [Setting(name: .Settings, imageName: "settings"), Setting(name: .TermsPrivacy, imageName: "privacy"), Setting(name: .FeedBack, imageName: "feedback"), Setting(name: .Help, imageName: "help"), Setting(name: .SwitchAccount, imageName: "switch_account"), Setting(name: .Cancel, imageName: "cancel")]
         
         return _settings
     }()
@@ -71,8 +80,18 @@ class SettingLauncher: NSObject, UICollectionViewDataSource, UICollectionViewDel
                 
             }, completion: nil)
             
-            blackView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(handleDismiss)))
+            blackView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(handleDismissEmpty)))
             
+        }
+    }
+    
+    func handleDismissEmpty() {
+        UIView.animate(withDuration: 0.5) {
+            self.blackView.alpha = 0
+            
+            if let window = UIApplication.shared.keyWindow {
+                self.collectionView.frame = CGRect(x: 0, y: window.frame.height, width: self.collectionView.frame.width, height: self.collectionView.frame.height)
+            }
         }
     }
     
@@ -87,7 +106,7 @@ class SettingLauncher: NSObject, UICollectionViewDataSource, UICollectionViewDel
         }) { (completed: Bool) in
             
             
-            if setting.name != "" && setting.name != "Cancel" {
+            if setting.name != .Cancel {
                 self.homeController?.showControllerForSettings(setting)
             }
         }
