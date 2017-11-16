@@ -21,6 +21,7 @@
 		9B7A45F81F9F99F00050015A /* VideoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B7A45F71F9F99F00050015A /* VideoCell.swift */; };
 		9B7A45FB1FA0CB450050015A /* MenuBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B7A45FA1FA0CB450050015A /* MenuBar.swift */; };
 		9B7A46001FA213BD0050015A /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B7A45FF1FA213BD0050015A /* Video.swift */; };
+		9B8430001FBC5FC400E5F4BF /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B842FFF1FBC5FC400E5F4BF /* APIService.swift */; };
 		D2D7435BBE52499E53420380 /* Pods_YouTubeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C190B278648C7E0F3C814997 /* Pods_YouTubeUITests.framework */; };
 		F534A240CBD4A3AFE2B1E4F5 /* Pods_YouTube.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD8946A49593750373831735 /* Pods_YouTube.framework */; };
 /* End PBXBuildFile section */
@@ -64,6 +65,7 @@
 		9B7A45F71F9F99F00050015A /* VideoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoCell.swift; sourceTree = "<group>"; };
 		9B7A45FA1FA0CB450050015A /* MenuBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuBar.swift; sourceTree = "<group>"; };
 		9B7A45FF1FA213BD0050015A /* Video.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Video.swift; sourceTree = "<group>"; };
+		9B842FFF1FBC5FC400E5F4BF /* APIService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		AD62E2A1BEEB7072B6C73864 /* Pods-YouTube.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YouTube.debug.xcconfig"; path = "Pods/Target Support Files/Pods-YouTube/Pods-YouTube.debug.xcconfig"; sourceTree = "<group>"; };
 		C190B278648C7E0F3C814997 /* Pods_YouTubeUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YouTubeUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBA7134B21F5E6FEFD032C41 /* Pods-YouTubeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YouTubeTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-YouTubeTests/Pods-YouTubeTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -136,6 +138,7 @@
 		9B7A45C41F9CEF950050015A /* YouTube */ = {
 			isa = PBXGroup;
 			children = (
+				9B842FFE1FBC5FB300E5F4BF /* APIService */,
 				9B7A45FC1FA213A80050015A /* Model */,
 				9B7A45F61F9F99E40050015A /* View */,
 				9B7A45F91F9F9A0E0050015A /* Controller */,
@@ -200,6 +203,14 @@
 				9B7A45FF1FA213BD0050015A /* Video.swift */,
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		9B842FFE1FBC5FB300E5F4BF /* APIService */ = {
+			isa = PBXGroup;
+			children = (
+				9B842FFF1FBC5FC400E5F4BF /* APIService.swift */,
+			);
+			name = APIService;
 			sourceTree = "<group>";
 		};
 		A98CA1A944C908B1A13CB3E9 /* Pods */ = {
@@ -506,6 +517,7 @@
 				9B7A45F81F9F99F00050015A /* VideoCell.swift in Sources */,
 				9B7A45C81F9CEF950050015A /* HomeController.swift in Sources */,
 				9B7A45C61F9CEF950050015A /* AppDelegate.swift in Sources */,
+				9B8430001FBC5FC400E5F4BF /* APIService.swift in Sources */,
 				9B7A45FB1FA0CB450050015A /* MenuBar.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
