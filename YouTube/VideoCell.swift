@@ -16,7 +16,7 @@ class BaseCell: UICollectionViewCell {
     }
     
     func setupViews() {
-        
+    
     }
     
     required init?(coder aDecoder: NSCoder) {

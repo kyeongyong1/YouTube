@@ -11,10 +11,26 @@ import Foundation
 class APIService: NSObject {
     
     static let sharedInstance = APIService()
+    let baseUrl = "https://s3-us-west-2.amazonaws.com/youtubeassets"
     
-
-    func fetchVideos(completion: @escaping ([Video]) -> ()) {        let url = URL(string: "https://s3-us-west-2.amazonaws.com/youtubeassets/home.json")
+    
+    func fetchVideos(completion: @escaping ([Video]) -> ()) {
         
+        fetchFeedFor(urlString: "\(baseUrl)/home.json", completion: completion)
+    }
+    
+    func fetchTrendingFeed(completion: @escaping ([Video]) -> ()) {
+        
+        fetchFeedFor(urlString: "\(baseUrl)/trending.json", completion: completion)
+    }
+    
+    func fetchSubscriptionFeed(completion: @escaping ([Video]) -> ()) {
+        
+        fetchFeedFor(urlString: "\(baseUrl)/subscriptions.json", completion: completion)
+    }
+    
+    func fetchFeedFor(urlString: String, completion: @escaping ([Video]) -> ()) {
+        let url = URL(string: urlString)
         let task = URLSession.shared.dataTask(with: url!) { (data, response, error) in
             
             if error != nil {
@@ -53,7 +69,8 @@ class APIService: NSObject {
             }
         }
         task.resume()
+
+        
     }
-    
-    
+
 }

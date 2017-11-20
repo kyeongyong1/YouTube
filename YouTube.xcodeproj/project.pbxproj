@@ -22,6 +22,9 @@
 		9B7A45FB1FA0CB450050015A /* MenuBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B7A45FA1FA0CB450050015A /* MenuBar.swift */; };
 		9B7A46001FA213BD0050015A /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B7A45FF1FA213BD0050015A /* Video.swift */; };
 		9B8430001FBC5FC400E5F4BF /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B842FFF1FBC5FC400E5F4BF /* APIService.swift */; };
+		9B8430021FC1AF0900E5F4BF /* FeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B8430011FC1AF0900E5F4BF /* FeedCell.swift */; };
+		9B8430041FC321D300E5F4BF /* TrendingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B8430031FC321D300E5F4BF /* TrendingCell.swift */; };
+		9B8430061FC3237600E5F4BF /* SubscriptionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B8430051FC3237600E5F4BF /* SubscriptionCell.swift */; };
 		D2D7435BBE52499E53420380 /* Pods_YouTubeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C190B278648C7E0F3C814997 /* Pods_YouTubeUITests.framework */; };
 		F534A240CBD4A3AFE2B1E4F5 /* Pods_YouTube.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD8946A49593750373831735 /* Pods_YouTube.framework */; };
 /* End PBXBuildFile section */
@@ -66,6 +69,9 @@
 		9B7A45FA1FA0CB450050015A /* MenuBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuBar.swift; sourceTree = "<group>"; };
 		9B7A45FF1FA213BD0050015A /* Video.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Video.swift; sourceTree = "<group>"; };
 		9B842FFF1FBC5FC400E5F4BF /* APIService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		9B8430011FC1AF0900E5F4BF /* FeedCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedCell.swift; sourceTree = "<group>"; };
+		9B8430031FC321D300E5F4BF /* TrendingCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrendingCell.swift; sourceTree = "<group>"; };
+		9B8430051FC3237600E5F4BF /* SubscriptionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubscriptionCell.swift; sourceTree = "<group>"; };
 		AD62E2A1BEEB7072B6C73864 /* Pods-YouTube.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YouTube.debug.xcconfig"; path = "Pods/Target Support Files/Pods-YouTube/Pods-YouTube.debug.xcconfig"; sourceTree = "<group>"; };
 		C190B278648C7E0F3C814997 /* Pods_YouTubeUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YouTubeUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBA7134B21F5E6FEFD032C41 /* Pods-YouTubeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YouTubeTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-YouTubeTests/Pods-YouTubeTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -184,6 +190,9 @@
 				9B7A45F71F9F99F00050015A /* VideoCell.swift */,
 				9B7A45FA1FA0CB450050015A /* MenuBar.swift */,
 				9B5EA1841FB4832900E13ABD /* SettingCell.swift */,
+				9B8430011FC1AF0900E5F4BF /* FeedCell.swift */,
+				9B8430031FC321D300E5F4BF /* TrendingCell.swift */,
+				9B8430051FC3237600E5F4BF /* SubscriptionCell.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -511,6 +520,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				9B5EA1811FB343EF00E13ABD /* SettingLauncher.swift in Sources */,
+				9B8430021FC1AF0900E5F4BF /* FeedCell.swift in Sources */,
+				9B8430041FC321D300E5F4BF /* TrendingCell.swift in Sources */,
 				9B7A45F51F9F99A60050015A /* Extension.swift in Sources */,
 				9B5EA1851FB4832900E13ABD /* SettingCell.swift in Sources */,
 				9B7A46001FA213BD0050015A /* Video.swift in Sources */,
@@ -518,6 +529,7 @@
 				9B7A45C81F9CEF950050015A /* HomeController.swift in Sources */,
 				9B7A45C61F9CEF950050015A /* AppDelegate.swift in Sources */,
 				9B8430001FBC5FC400E5F4BF /* APIService.swift in Sources */,
+				9B8430061FC3237600E5F4BF /* SubscriptionCell.swift in Sources */,
 				9B7A45FB1FA0CB450050015A /* MenuBar.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
