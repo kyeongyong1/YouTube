@@ -113,8 +113,6 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
         view.addContraintsWithFormat(format: "H:|[v0]|", views: redView)
         view.addContraintsWithFormat(format: "V:[v0(50)]", views: redView)
         
-        
-        
         view.addSubview(menuBar)
         view.addContraintsWithFormat(format: "H:|[v0]|", views: menuBar)
         view.addContraintsWithFormat(format: "V:[v0(50)]", views: menuBar)

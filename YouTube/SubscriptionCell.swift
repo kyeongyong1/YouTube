@@ -10,8 +10,6 @@ import UIKit
 
 class SubscriptionCell: FeedCell {
     
-    
-    
     override func fetchVideos() {
        
         APIService.sharedInstance.fetchSubscriptionFeed { (videos) in
